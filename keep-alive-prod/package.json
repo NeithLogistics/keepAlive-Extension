@@ -35,7 +35,7 @@
           },
           "keepAlive.interval": {
             "type": "number",
-            "default": 300,
+            "default": 3600000, 
             "description": "Ping interval in milliseconds."
           }
         }
