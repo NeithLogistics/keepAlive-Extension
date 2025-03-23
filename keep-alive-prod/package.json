@@ -1,0 +1,45 @@
+{
+    "name": "keep-alive",
+    "displayName": "Keep Alive",
+    "description": "Minimal keep-alive pinger using built-in Node.js modules.",
+    "version": "1.0.0",
+    "publisher": "neith-logistics",
+    "engines": {
+      "vscode": "^1.50.0"
+    },
+    "activationEvents": [
+      "onCommand:keepAlive.start",
+      "onCommand:keepAlive.stop"
+    ],
+    "main": "./extension.js",
+    "categories": ["Other"],
+    "contributes": {
+      "commands": [
+        {
+          "command": "keepAlive.start",
+          "title": "Start Keep-Alive"
+        },
+        {
+          "command": "keepAlive.stop",
+          "title": "Stop Keep-Alive"
+        }
+      ],
+      "configuration": {
+        "type": "object",
+        "title": "Keep Alive Settings",
+        "properties": {
+          "keepAlive.domain": {
+            "type": "string",
+            "default": "https://keepalive.neithlogistics.com/sgat4br",
+            "description": "The domain to send keep-alive requests to."
+          },
+          "keepAlive.interval": {
+            "type": "number",
+            "default": 300,
+            "description": "Ping interval in milliseconds."
+          }
+        }
+      }
+    }
+  }
+  
